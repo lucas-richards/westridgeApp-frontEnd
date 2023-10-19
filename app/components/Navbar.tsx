@@ -3,6 +3,7 @@
 import { Disclosure } from "@headlessui/react"
 import Link from 'next/link'
 import {usePathname} from 'next/navigation'
+import Themebutton from "./Themebutton"
 
 export default function Navbar() {
 
@@ -24,35 +25,36 @@ export default function Navbar() {
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">
                                     {/* prefetch will get the data from the backend and will be almost instant */}
                                     <Link 
-                                    href="/" 
-                                    prefetch 
-                                    className={`${
-                                        pathname === '/'
-                                    ?'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
-                                    :
-                                    'border-transparent text-gray-500 dar:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
-                                    Home
+                                        href="/" 
+                                        prefetch 
+                                        className={`${
+                                            pathname === '/'
+                                        ?'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        :
+                                        'border-transparent text-gray-500 dar:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
+                                        Home
                                     </Link>
                                     <Link 
-                                    href="/guestbook" 
-                                    prefetch 
-                                    className={`${
-                                        pathname === '/guestbook'
-                                    ?'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
-                                    :
-                                    'border-transparent text-gray-500 dar:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
-                                    Guestbook
+                                        href="/guestbook" 
+                                        prefetch 
+                                        className={`${
+                                            pathname === '/guestbook'
+                                        ?'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        :
+                                        'border-transparent text-gray-500 dar:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
+                                        Guestbook
                                     </Link>
                                     <Link 
-                                    href="/projects" 
-                                    prefetch 
-                                    className={`${
-                                        pathname === '/projects'
-                                    ?'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
-                                    :
-                                    'border-transparent text-gray-500 dar:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
-                                    Projects
+                                        href="/projects" 
+                                        prefetch 
+                                        className={`${
+                                            pathname === '/projects'
+                                        ?'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        :
+                                        'border-transparent text-gray-500 dar:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
+                                        Projects
                                     </Link>
+                                    <Themebutton />
                                 </div>
                             </div>
                             <div className="-mr-2 flex items-center sm:hidden">
@@ -105,7 +107,6 @@ export default function Navbar() {
                                 Projects
                             </Link>
                            
-
                         </div>
                         
                     </Disclosure.Panel>
