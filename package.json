@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
+    "@prisma/client": "^5.4.2",
     "next": "13.5.5",
     "next-themes": "^0.2.1",
     "react": "^18",
