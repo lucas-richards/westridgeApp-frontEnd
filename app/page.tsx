@@ -24,7 +24,7 @@ export default function Home() {
             Lucas Richards
           </h3>
           <p className='text-gray-500 dark:text-gray-300 text-center'>
-            Hey my name is Lucas Richards and I am a Full Stack Developer
+            Full Stack Developer
           </p>
           <div className='flex space-x-5 pt-6'>
             <a href="https://github.com/lucas-richards" target='_blank'>
