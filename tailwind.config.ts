@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        mainColor: '#12B8FF', // Replace with your desired color value
+      },
     },
   },
   plugins: [

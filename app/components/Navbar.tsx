@@ -18,7 +18,7 @@ export default function Navbar() {
                                 <div className="flex items-center">
                                     <Link href="/">
                                         <h1 className="text-2xl font-medium">
-                                            Lucas <span className="text-teal-500">Richards</span>
+                                            Lucas <span className="text-mainColor">Richards</span>
                                         </h1>
                                     </Link>
                                 </div>
@@ -29,7 +29,7 @@ export default function Navbar() {
                                         prefetch 
                                         className={`${
                                             pathname === '/'
-                                        ?'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        ?'border-mainColor dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
                                         :
                                         'border-transparent text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
                                         Home
@@ -39,7 +39,7 @@ export default function Navbar() {
                                         prefetch 
                                         className={`${
                                             pathname === '/guestbook'
-                                        ?'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        ?'border-mainColor dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
                                         :
                                         'border-transparent text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
                                         Guestbook
@@ -49,7 +49,7 @@ export default function Navbar() {
                                         prefetch 
                                         className={`${
                                             pathname === '/projects'
-                                        ?'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        ?'border-mainColor dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
                                         :
                                         'border-transparent text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
                                         Projects
@@ -59,7 +59,7 @@ export default function Navbar() {
                             </div>
                             <div className="-mr-2 flex items-center sm:hidden">
                                 <Themebutton />
-                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-insert focus:ring-teal-500 dark:hover:bg-gray-800">
+                                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-insert focus:ring-mainColor dark:hover:bg-gray-800">
                                     {open ?(
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -85,8 +85,8 @@ export default function Navbar() {
                                 href="/" 
                                 prefetch 
                                 className={`${pathname == "/"
-                                ?"bg-teal-50 border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-base font-medium dark:bg-gray-800"
-                                :"border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 dark:hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}
+                                ?"bg-teal-50 border-mainColor text-mainColor block pl-3 pr-4 py-2 border-l-4 text-base font-base font-medium dark:bg-gray-800"
+                                :"border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-mainColor dark:hover:text-mainColor block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}
                                 >
                                 Home
                             </Link>
@@ -94,8 +94,8 @@ export default function Navbar() {
                                 href="/guestbook" 
                                 prefetch 
                                 className={`${pathname == "/guestbook"
-                                ?"bg-teal-50 border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-base font-medium dark:bg-gray-800"
-                                :"border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 dark:hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}
+                                ?"bg-teal-50 border-mainColor text-mainColor block pl-3 pr-4 py-2 border-l-4 text-base font-base font-medium dark:bg-gray-800"
+                                :"border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-mainColor dark:hover:text-mainColor block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}
                                 >
                                 Guestbook
                             </Link>
@@ -103,8 +103,8 @@ export default function Navbar() {
                                 href="/projects" 
                                 prefetch 
                                 className={`${pathname == "/projects"
-                                ?"bg-teal-50 border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-base font-medium dark:bg-gray-800"
-                                :"border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-teal-500 dark:hover:text-teal-500 block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}
+                                ?"bg-teal-50 border-mainColor text-mainColor block pl-3 pr-4 py-2 border-l-4 text-base font-base font-medium dark:bg-gray-800"
+                                :"border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-mainColor dark:hover:text-mainColor block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"}`}
                                 >
                                 Projects
                             </Link>
