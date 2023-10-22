@@ -2,6 +2,11 @@
 
 import Image from 'next/image'
 import imageUrl from '../favicon.ico'
+import tradImg from '../../public/tradingPlayground.png'
+import  taskImg from '../../public/taskMan.png'
+import smooImg from '../../public/smoothie.png'
+import solImg from '../../public/solitaire.png'
+import comImg from '../../public/comingsoon.jpeg'
 import { useState } from 'react'
 
 
@@ -11,12 +16,12 @@ const iconStyleOp = 'w-8 h-8 lg:w-12 lg:h-12 text-black hover:opacity-100 dark:t
 
 export default function Projects() {
     const data = [
-        {id:0, title:'Trading Playground', desc: 'description 1', stack:['m','e','r','n','js'], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:1, title:'Task Master', desc: 'description 2', stack:['p','dj','sql'], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:2, title:'Smoothies App', desc: 'description 3', stack:['m','e','n','js'], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:3, title:'Solitaire', desc: 'description 4', stack:['js'], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:4, title:'Blog', desc: 'description 5', stack:[], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:5, title:'Burger Stacker', desc: 'description 6', stack:[], img:imageUrl, link:'http://localhost:3000/projects'},
+        {id:0, title:'Trading Playground', desc: 'Is a simulated space where individuals can practice and learn about trading financial assets without using real money.', stack:['m','e','r','n','js'], img:tradImg, gitLink:'https://github.com/lucas-richards/tradingPlaygroundAPI', depLink:'https://trading-playground.netlify.app/'},
+        {id:1, title:'Task Master', desc: 'Task management app where project managers can create, prioritize, and track tasks. Including features like due dates, task project, task comments and task assignments.', stack:['p','dj','sql'], img:taskImg, gitLink:'https://github.com/lucas-richards/task_master', depLink:'https://task-master-lucas1.onrender.com/'},
+        {id:2, title:'Smoothies App', desc: 'Smoothies App allows you to create your own smoothie including macro-nutrients and share it with the world.', stack:['m','e','n','js'], img:smooImg, gitLink:'https://github.com/lucas-richards/Smoothie-App', depLink:'https://smoothieapp.fly.dev/'},
+        {id:3, title:'Solitaire', desc: 'Solitaire goes back to my childhood vacations, those rainy days at the beach house. This game simulates a solitaire with cards from the comfort of your home.', stack:['js'], img:solImg, gitLink:'https://github.com/lucas-richards/Solitaire-with-cards', depLink:'https://lucas-richards.github.io/Solitaire-with-cards/'},
+        {id:4, title:'Blog', desc: 'description 5', stack:[], img:comImg, gitLink:'', depLink:'http://localhost:3000/projects'},
+        {id:5, title:'Burger Stacker', desc: 'description 6', stack:[], img:comImg, gitLink:'', depLink:'http://localhost:3000/projects'},
     ]
 
     const [m,setM] = useState(false)
@@ -146,18 +151,16 @@ export default function Projects() {
                             />
                         </div>
                         <div className='p-4 sm:p-6'>
-                            <a href={project.link} target='_blank'>
-                                <h3 className='text-lg font-medium text-gray-900 dark:text-white'>
-                                    {project.title}
-                                </h3>
-                            </a>
-
+                            <h3 className='text-lg font-medium text-gray-900 dark:text-white'>
+                                {project.title}
+                            </h3>
+                            
                             <p className='line-clamp-3 m-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400'>
                                 {project.desc}
                             </p>
 
                             <div className='grid gap-2 grid-cols-4 place-items-center'>
-                                <a href="https://github.com/lucas-richards" target='_blank'>
+                                <a href={project.gitLink} target='_blank'>
                                     <svg
                                     viewBox="0 0 1024 1024"
                                     fill="currentColor"
@@ -166,7 +169,7 @@ export default function Projects() {
                                     <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z" />
                                 </svg>
                                 </a>
-                                <a href="https://www.linkedin.com/in/lucas-richards19/" target='_blank'>
+                                <a href={project.depLink} target='_blank'>
                                 <svg 
                                     xmlns="http://www.w3.org/2000/svg" 
                                     fill="none" 
