@@ -1,19 +1,45 @@
+"use client"
+
 import Image from 'next/image'
 import imageUrl from '../favicon.ico'
+import { useState } from 'react'
 
-const iconStyle = 'w-8 h-8 lg:w-12 lg:h-12 text-black opacity-75 hover:opacity-100 dark:text-white'
+
+const iconStyle = 'w-8 h-8 lg:w-12 lg:h-12 text-black opacity-30 hover:opacity-100 dark:text-white'
+const iconStyleOp = 'w-8 h-8 lg:w-12 lg:h-12 text-black hover:opacity-100 dark:text-white'
 
 
 export default function Projects() {
     const data = [
-        {id:0, title:'project1', desc: 'description 1', stack:['p'], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:1, title:'project2', desc: 'description 2', stack:[], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:2, title:'project3', desc: 'description 3', stack:[], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:3, title:'project4', desc: 'description 4', stack:[], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:4, title:'project5', desc: 'description 5', stack:[], img:imageUrl, link:'http://localhost:3000/projects'},
-        {id:5, title:'project6', desc: 'description 6', stack:[], img:imageUrl, link:'http://localhost:3000/projects'},
+        {id:0, title:'Trading Playground', desc: 'description 1', stack:['m','e','r','n','js'], img:imageUrl, link:'http://localhost:3000/projects'},
+        {id:1, title:'Task Master', desc: 'description 2', stack:['p','dj','sql'], img:imageUrl, link:'http://localhost:3000/projects'},
+        {id:2, title:'Smoothies App', desc: 'description 3', stack:['m','e','n','js'], img:imageUrl, link:'http://localhost:3000/projects'},
+        {id:3, title:'Solitaire', desc: 'description 4', stack:['js'], img:imageUrl, link:'http://localhost:3000/projects'},
+        {id:4, title:'Blog', desc: 'description 5', stack:[], img:imageUrl, link:'http://localhost:3000/projects'},
+        {id:5, title:'Burger Stacker', desc: 'description 6', stack:[], img:imageUrl, link:'http://localhost:3000/projects'},
     ]
 
+    const [m,setM] = useState(false)
+    const [e,setE] = useState(false)
+    const [r,setR] = useState(false)
+    const [n,setN] = useState(false)
+    const [p,setP] = useState(false)
+    const [js,setJs] = useState(false)
+    const [dj,setDj] = useState(false)
+    const [sql,setSql] = useState(false)
+
+    const handleClick = (stack: string[]) => {
+        setM(stack.includes('m'));
+        setE(stack.includes('e'));
+        setR(stack.includes('r'));
+        setN(stack.includes('n'));
+        setP(stack.includes('p'));
+        setJs(stack.includes('js'));
+        setDj(stack.includes('dj'));
+        setSql(stack.includes('sql'));
+        console.log('Stacks:', stack.join(', '));
+        console.log(p);
+    };
 
     return(
         <div className="divide-y divide-gray-100 dark:divide-gray-700">
@@ -24,11 +50,12 @@ export default function Projects() {
             </div>
             <div className='sticky top-0 bg-white dark:bg-black z-50 m-5 p-2 rounded-lg shadow-lg dark:shadow-gray-700 '>
                 <div className='grid gap-2 sm:grid-cols-8 grid-cols-4  lg:gap-5 p-2 place-items-center '>
-                <div id='p' className='flex items-center flex-col'>
+                <div className='flex items-center flex-col'>
                     <svg
+                        id='p'
                         viewBox="0 0 32 32"
                         fill="currentColor"
-                        className={iconStyle}
+                        className={p?iconStyleOp:iconStyle}
                         >
                         <path
                             fill="currentColor"
@@ -40,7 +67,7 @@ export default function Projects() {
                 <svg
                     viewBox="0 0 32 32"
                     fill="currentColor"
-                    className={iconStyle}
+                    className={n?iconStyleOp:iconStyle}
                     >
                     <path
                         fill="currentColor"
@@ -50,14 +77,14 @@ export default function Projects() {
                 <svg
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className={iconStyle}
+                    className={e?iconStyleOp:iconStyle}
                     >
                     <path d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z" />
                     </svg>
                     <svg
                         viewBox="0 0 34 32"
                         fill="currentColor"
-                        className={iconStyle}
+                        className={r?iconStyleOp:iconStyle}
                         >
                         <path
                             fill="currentColor"
@@ -71,7 +98,7 @@ export default function Projects() {
                     <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className={iconStyle}
+                        className={m?iconStyleOp:iconStyle}
                         
                         >
                         <path d="M13.74 4.23c-.84-1-1.57-2-1.71-2.22H12c-.14.21-.87 1.22-1.71 2.22-7.2 9.19 1.14 15.39 1.14 15.39l.07.05c.06.95.22 2.33.22 2.33h.62s.15-1.37.21-2.33l.07-.06s8.32-6.19 1.12-15.38zM12 19.48a3.48 3.48 0 01-.48-.48L12 9l.45 10a3.57 3.57 0 01-.45.48z" />
@@ -79,7 +106,7 @@ export default function Projects() {
                     <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className={iconStyle}
+                        className={dj?iconStyleOp:iconStyle}
                         >
                         <path d="M7.533 12.249c-.011 1.985 1.445 3.168 3.768 2.63V9.618c-2.352-.716-3.758.733-3.768 2.631m3.839-10.238h3.199v15.143c-3.066.501-6.004.819-8.104-.355-2.705-1.513-2.923-6.319-.782-8.46 1.085-1.085 3.271-1.85 5.616-1.351V2.225c-.006-.101-.012-.202.071-.214m8.389 3.342h-3.199V2.011h3.199v3.342z" />
                         <path d="M19.761 7.044c-.003 2.356-.003 4.048-.003 6.911-.136 2.813-.104 5.052-1.135 6.398-.203.266-.634.652-.995.924-.303.228-.881.691-1.208.711-.331.021-1.18-.459-1.564-.64-.505-.237-.971-.553-1.493-.71 1.218-.754 2.372-1.32 2.844-2.844.41-1.326.355-3.247.355-5.119 0-1.849.009-3.998.009-5.63l3.19-.001z" />
@@ -87,14 +114,14 @@ export default function Projects() {
                     <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className={iconStyle}
+                        className={js?iconStyleOp:iconStyle}
                         >
                         <path d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.608 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z" />
                     </svg>
                     <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className={iconStyle}
+                        className={sql?iconStyleOp:iconStyle}
                         >
                         <path d="M10.74 12.89v-.11c.06-.15.12-.29.19-.43a5.15 5.15 0 00.26-3.74.86.86 0 00-.66-.74 3.12 3.12 0 00-2.08.61v.18a11.34 11.34 0 01-.06 2.41 2.37 2.37 0 00.62 2 2 2 0 001.43.63 8.05 8.05 0 01.3-.81zM10 8.58a.36.36 0 01-.09-.23.19.19 0 01.09-.12.74.74 0 01.48-.07c.25 0 .5.16.48.34a.51.51 0 01-.49.33h-.06a.63.63 0 01-.41-.25z" />
                         <path d="M7.88 11a12.58 12.58 0 00.06-2.3v-.28a7 7 0 011.54-4.55c-1-.32-3.4-1-4.87.1-.9.64-1.32 1.84-1.23 3.55a24.85 24.85 0 001 4.4c.68 2.22 1.45 3.62 2.11 3.85.1 0 .41.13.86-.41.64-.76 1.23-1.41 1.5-1.7l-.19-.19A2.89 2.89 0 017.88 11zm3.5 3.4c-.16-.06-.24-.1-.42.11a2.52 2.52 0 00-.29.35c-.35.43-.5.58-1.51.79a2 2 0 00-.4.11 1 1 0 00.37.16 2.21 2.21 0 002.5-.8.41.41 0 000-.35.59.59 0 00-.25-.37zm6.29-5.82a5.29 5.29 0 00.08-.79c-.66-.08-1.42-.07-1.72.36-.58.83.56 2.88 1 3.75a4.34 4.34 0 01.26.48 1.79 1.79 0 00.15.31 3.72 3.72 0 00.16-2.13 7.51 7.51 0 01-.07-1.05 6 6 0 01.14-.93zm-.56-.16a.6.6 0 01-.32.17h-.06a.47.47 0 01-.44-.3c0-.14.2-.24.44-.28s.48 0 .5.15a.38.38 0 01-.12.26z" />
@@ -109,7 +136,7 @@ export default function Projects() {
                 
             <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-8">
                 {data.map(project =>(
-                    <article key={project.id} className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-mainColor">
+                    <article key={project.id} onClick={() => handleClick(project.stack)} className="project-container overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-mainColor">
                         <div className='h-56 w-full relative'>
                             <Image 
                                 fill 

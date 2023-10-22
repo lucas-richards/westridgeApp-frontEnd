@@ -17,8 +17,8 @@ export default function Navbar() {
                             <div className="flex justify-between w-full">
                                 <div className="flex items-center">
                                     <Link href="/">
-                                        <h1 className="text-2xl font-medium">
-                                            Lucas <span className="text-mainColor">Richards</span>
+                                        <h1 className="text-2xl font-medium ">
+                                            Lucas <span className="text-mainColor ">Richards</span>
                                         </h1>
                                     </Link>
                                 </div>
