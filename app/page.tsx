@@ -67,7 +67,7 @@ export default function Home() {
             I have a deep passion for crafting full-stack applications using Python/Django and the MERN stack to streamline business operations and tackle challenges. My journey into coding was truly eye-opening; the boundless potential it offers to automate various aspects of both personal and professional life is astonishing. 
           </p>
           <p>
-            Embracing technology is key to enhancing our daily existence. After all, who wouldn't appreciate automating tedious tasks, freeing up valuable time to enrich our lives with meaningful contributions?
+            Embracing technology is key to enhancing our daily existence. After all, who wouldn&apos;t appreciate automating tedious tasks, freeing up valuable time to enrich our lives with meaningful contributions?
           </p>
         </div>
       </div>
