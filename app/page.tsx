@@ -69,6 +69,7 @@ export default function Home() {
           <p>
             Embracing technology is key to enhancing our daily existence. After all, who wouldn&apos;t appreciate automating tedious tasks, freeing up valuable time to enrich our lives with meaningful contributions?
           </p>
+          
         </div>
       </div>
 
