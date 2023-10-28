@@ -7,6 +7,7 @@ import  taskImg from '../../public/taskMan.png'
 import smooImg from '../../public/smoothie.png'
 import solImg from '../../public/solitaire.png'
 import comImg from '../../public/comingsoon.jpeg'
+import pilotImg from '../../public/pilotPlate.png'
 import { useState } from 'react'
 
 
@@ -20,8 +21,8 @@ export default function Projects() {
         {id:1, title:'Task Master', desc: 'Task management app where project managers can create, prioritize, and track tasks. Including features like due dates, task project, task comments and task assignments.', stack:['p','dj','sql'], img:taskImg, gitLink:'https://github.com/lucas-richards/task_master', depLink:'https://task-master-lucas1.onrender.com/'},
         {id:2, title:'Smoothies App', desc: 'Smoothies App allows you to create your own smoothie including macro-nutrients and share it with the world.', stack:['m','e','n','js'], img:smooImg, gitLink:'https://github.com/lucas-richards/Smoothie-App', depLink:'https://smoothieapp.fly.dev/'},
         {id:3, title:'Solitaire', desc: 'Solitaire goes back to my childhood vacations, those rainy days at the beach house. This game simulates a solitaire with cards from the comfort of your home.', stack:['js'], img:solImg, gitLink:'https://github.com/lucas-richards/Solitaire-with-cards', depLink:'https://lucas-richards.github.io/Solitaire-with-cards/'},
-        {id:4, title:'Blog', desc: 'description 5', stack:[], img:comImg, gitLink:'', depLink:'http://localhost:3000/projects'},
-        {id:5, title:'Burger Stacker', desc: 'description 6', stack:[], img:comImg, gitLink:'', depLink:'http://localhost:3000/projects'},
+        {id:4, title:'Pilot Plate', desc: 'COMING SOON! Pilot Plate is the ultimate app for making quick dining decisions, discovering new restaurants, and planning unforgettable culinary adventures with friends.', stack:[], img:pilotImg, gitLink:'', depLink:'http://localhost:3000/projects'},
+        {id:5, title:'Share', desc: 'COMING SOON! Share is your go-to app for effortless blogging, enabling you to share your thoughts, experiences, and creativity with the world in a breeze.', stack:[], img:comImg, gitLink:'', depLink:'http://localhost:3000/projects'},
     ]
 
     const [m,setM] = useState(false)

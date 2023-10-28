@@ -34,7 +34,7 @@ export default function Navbar() {
                                         'border-transparent text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
                                         Home
                                     </Link>
-                                    <Link 
+                                    {/* <Link 
                                         href="/guestbook" 
                                         prefetch 
                                         className={`${
@@ -43,7 +43,7 @@ export default function Navbar() {
                                         :
                                         'border-transparent text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
                                         Guestbook
-                                    </Link>
+                                    </Link> */}
                                     <Link 
                                         href="/projects" 
                                         prefetch 
