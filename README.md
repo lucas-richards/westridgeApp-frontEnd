@@ -1,6 +1,6 @@
 # My Portfolio
 
 ## Getting Started
-- Find my latest project
+- Find my latest projects
 - Contact me
 - Download my resume
