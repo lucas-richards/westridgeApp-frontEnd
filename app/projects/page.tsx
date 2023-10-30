@@ -53,7 +53,7 @@ export default function Projects() {
                     All Projects
                 </h1>
             </div>
-            <div className='sticky top-0 bg-white dark:bg-black z-50 m-5 p-2 rounded-lg shadow-lg dark:shadow-gray-700 '>
+            <div className='sticky top-2 bg-white dark:bg-black z-50 m-5 p-2 rounded-lg shadow-lg dark:shadow-gray-700 '>
                 <div className='grid gap-2 sm:grid-cols-8 grid-cols-4  lg:gap-5 p-2 place-items-center '>
                 <div className='flex items-center flex-col'>
                     <svg
