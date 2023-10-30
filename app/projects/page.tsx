@@ -1,7 +1,6 @@
 "use client"
 
 import Image from 'next/image'
-import imageUrl from '../favicon.ico'
 import tradImg from '../../public/tradingPlayground.png'
 import  taskImg from '../../public/taskMan.png'
 import smooImg from '../../public/smoothie.png'
