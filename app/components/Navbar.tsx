@@ -18,7 +18,7 @@ export default function Navbar() {
                                 <div className="flex items-center">
                                     <Link href="/">
                                         <h1 className="text-2xl font-medium ">
-                                            Lucas <span className="text-mainColor ">Richards</span>
+                                            Westridge <span className="text-mainColor ">App</span>
                                         </h1>
                                     </Link>
                                 </div>
@@ -44,7 +44,7 @@ export default function Navbar() {
                                         'border-transparent text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
                                         Guestbook
                                     </Link> */}
-                                    <Link 
+                                    {/* <Link 
                                         href="/projects" 
                                         prefetch 
                                         className={`${
@@ -53,7 +53,7 @@ export default function Navbar() {
                                         :
                                         'border-transparent text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
                                         Projects
-                                    </Link>
+                                    </Link> */}
                                     <Themebutton />
                                 </div>
                             </div>
