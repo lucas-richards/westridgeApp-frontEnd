@@ -34,6 +34,16 @@ export default function Navbar() {
                                         'border-transparent text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
                                         Home
                                     </Link>
+                                    <Link 
+                                        href="/auth/signin" 
+                                        prefetch 
+                                        className={`${
+                                            pathname === '/auth/signin'
+                                        ?'border-mainColor dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        :
+                                        'border-transparent text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}`}>
+                                        Sign In
+                                    </Link>
                                     {/* <Link 
                                         href="/guestbook" 
                                         prefetch 
