@@ -1,9 +1,6 @@
 import apiUrl from '../apiConfig'
 
-// READ -> Index
-// export const getAllCertifications = (dataId) => {
-//     return axios(`${apiUrl}/certifications/search?dataId=${dataId}`)
-// }
+
 export const getAllCertifications = async () => {
     try {
       const response = await fetch(`${apiUrl}/training/api/certifications`);

@@ -1,55 +1,76 @@
 import apiUrl from '../apiConfig'
-import axios from 'axios'
 
-export const signUp = (credentials) => {
-	return axios({
-		method: 'POST',
-		url: apiUrl + '/sign-up',
-		data: {
-			credentials: {
-				email: credentials.email,
-				password: credentials.password,
-				password_confirmation: credentials.passwordConfirmation,
+export const signUp = async (credentials) => {
+	try {
+		const response = await fetch(apiUrl + '/sign-up', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
 			},
-		},
-	})
-}
+			body: JSON.stringify({
+				credentials: {
+					email: credentials.email,
+					password: credentials.password,
+					password_confirmation: credentials.passwordConfirmation,
+				},
+			}),
+		});
+		return response.json();
+	} catch (error) {
+		throw error;
+	}
+};
 
-export const signIn = (credentials) => {
-	return axios({
-		url: apiUrl + '/sign-in',
-		method: 'POST',
-		data: {
-			credentials: {
-				email: credentials.email,
-				password: credentials.password,
+export const signIn = async (username,password) => {
+	try {
+		const response = await fetch(apiUrl + '/api/login/', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
 			},
-		},
-	})
-}
+			body: JSON.stringify({
+				username: username,
+				password: password
+			}),
+		});
+		return response;
+	} catch (error) {
+		throw error;
+	}
+};
 
-export const signOut = (user) => {
-	return axios({
-		url: apiUrl + '/sign-out',
-		method: 'DELETE',
-		headers: {
-			Authorization: `Token token=${user.token}`,
-		},
-	})
-}
-
-export const changePassword = (passwords, user) => {
-	return axios({
-		url: apiUrl + '/change-password',
-		method: 'PATCH',
-		headers: {
-			Authorization: `Token token=${user.token}`,
-		},
-		data: {
-			passwords: {
-				old: passwords.oldPassword,
-				new: passwords.newPassword,
+export const signOut = async (user) => {
+	try {
+		const response = await fetch(apiUrl + '/sign-out', {
+			method: 'DELETE',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Token token=${user.token}`,
 			},
-		},
-	})
-}
+		});
+		return response.json();
+	} catch (error) {
+		throw error;
+	}
+};
+
+export const changePassword = async (passwords, user) => {
+	try {
+		const response = await fetch(apiUrl + '/change-password', {
+			method: 'PATCH',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Token token=${user.token}`,
+			},
+			body: JSON.stringify({
+				passwords: {
+					old: passwords.oldPassword,
+					new: passwords.newPassword,
+				},
+			}),
+		});
+		return response.json();
+	} catch (error) {
+		throw error;
+	}
+};

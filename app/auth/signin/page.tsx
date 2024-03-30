@@ -12,6 +12,7 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { signIn } from "../../../api/auth.js"
 
 function Copyright(props: any) {
   return (
@@ -31,9 +32,20 @@ export default function SignIn() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      email: data.get('email'),
+      username: data.get('username'),
       password: data.get('password'),
     });
+    // hit the signIn api with data
+    signIn(data.get('username'), data.get('password'))
+    .then((response: any) => { 
+      if (response.ok) {
+        console.log("Login successful")
+        // redirect to home page
+        window.location.href = "/"
+      }
+    })
+
+
   };
 
   return (
@@ -59,10 +71,10 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="Username"
+              name="username"
+              autoComplete="username"
               autoFocus
             />
             <TextField
